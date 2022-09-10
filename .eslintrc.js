@@ -23,6 +23,10 @@ module.exports = {
             }
         }],
         'comma-dangle': [0, "always-multiline"],
-        "arrow-body-style": "off"
+        "arrow-body-style": "off",
+        "vue/no-parsing-error": ["error", {
+            "incorrectly-closed-comment": false,
+            "eof-in-comment": false,
+        }]
     },
 };
