@@ -1,4 +1,4 @@
-# app-resume
+# app-resume by Alexander
 
 ## Project setup
 ```
