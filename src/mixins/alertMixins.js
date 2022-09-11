@@ -1,4 +1,4 @@
-const alertMixin = {
+export default {
     data() {
         return {
             alert: false,
@@ -9,4 +9,4 @@ const alertMixin = {
             this.alert = !this.alert;
         },
     },
-}
+};

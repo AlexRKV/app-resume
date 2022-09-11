@@ -15,19 +15,11 @@
 </template>
 
 <script>
+import alertMixin from "@/mixins/alertMixins";
 import AppMixins from "./AppMixins.vue";
 
 export default {
-    data() {
-        return {
-            alert: false,
-        };
-    },
-    methods: {
-        alertToggle() {
-            this.alert = !this.alert;
-        },
-    },
+    mixins: [alertMixin],
     components: {
         AppMixins,
     },

@@ -20,21 +20,13 @@
 <script>
 import AppMixins from "@/components/AppMixins.vue";
 import AppAlertBlock from "@/components/AppAlertBlock.vue";
+import alertMixin from "@/mixins/alertMixins";
 
 export default {
-    data() {
-        return {
-            alert: false,
-        };
-    },
+    mixins: [alertMixin],
     components: {
         AppMixins,
         AppAlertBlock,
-    },
-    methods: {
-        alertToggle() {
-            this.alert = !this.alert;
-        },
     },
 };
 </script>
