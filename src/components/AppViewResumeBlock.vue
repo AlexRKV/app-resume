@@ -1,6 +1,6 @@
 <template>
     <div class="card card-w70">
-        <template>
+        <template v-if="blocks.length">
             <component
                 v-for="el in blocks"
                 :key="el.id"
@@ -8,6 +8,7 @@
                 v-bind="{ value: el.value }"
             ></component>
         </template>
+        <h3 v-else>Резюме не заполнено</h3>
     </div>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
-    <div class="card card-w30" @submit.prevent="submit">
+    <form class="card card-w30" @submit.prevent="submit">
         <div class="form-control">
-            <label for="type">Тип Блока</label>
-            <select id="type" v-model="type">
+            <label for="name">Тип Блока</label>
+            <select id="name" v-model="type">
                 <option value="title">Заголовок</option>
                 <option value="subtitle">Подзаголовок</option>
                 <option value="avatar">Аватар</option>
@@ -10,11 +10,11 @@
             </select>
         </div>
         <div class="form-control">
-            <label for="value">Тип Блока</label>
-            <textarea id="value" cols="30" rows="10" v-model="value"></textarea>
+            <label for="val">Тип Блока</label>
+            <textarea id="val" v-model="value"></textarea>
         </div>
-        <button class="btn primary">добавить</button>
-    </div>
+        <button class="btn primary" :disabled="!isValid">добавить</button>
+    </form>
 </template>
 
 <script>
@@ -34,6 +34,12 @@ export default {
             });
             this.value = "";
             this.type = "title";
+            console.log(this.value);
+        },
+    },
+    computed: {
+        isValid() {
+            return this.value.length > 3;
         },
     },
 };

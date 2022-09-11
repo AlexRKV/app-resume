@@ -1,3 +1,3 @@
 <template>
-    <p>{$attr:value}</p>
+    <p>{{$attrs.value}}</p>
 </template>
