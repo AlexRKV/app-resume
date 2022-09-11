@@ -4,8 +4,6 @@
             v-if="alert"
             title="Hello"
             text="This is my App!"
-            typeClass="warning"
-            :closable="true"
             @close="alert = false"
         />
         <div class="card">
@@ -13,13 +11,11 @@
                 {{ alert ? "закрыть" : "открыть" }}
             </button>
         </div>
-        <AppAlertBlock />
     </div>
 </template>
 
 <script>
-import AppMixins from "@/components/AppMixins.vue";
-import AppAlertBlock from "@/components/AppAlertBlock.vue";
+import AppMixins from "./AppMixins.vue";
 
 export default {
     data() {
@@ -27,14 +23,13 @@ export default {
             alert: false,
         };
     },
-    components: {
-        AppMixins,
-        AppAlertBlock,
-    },
     methods: {
         alertToggle() {
             this.alert = !this.alert;
         },
+    },
+    components: {
+        AppMixins,
     },
 };
 </script>
